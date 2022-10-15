@@ -1,3 +1,4 @@
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 #Создать значения реестра
 $reg = "HKLM:\SYSTEM\CurrentControlSet\Services\RemoteAccess\Interfaces"
 $reg1 = "HKLM:\SYSTEM\CurrentControlSet\Services\RemoteAccess\Interfaces\10"
