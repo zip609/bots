@@ -1,4 +1,4 @@
-[Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding("utf-8")
+[Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding("cp866")
 $txt1  = "Загрузить дополнительные модули"
 $txt2  = "Закрыть программу"
 $txt3  = "Ваша версия Powershell не совместима с этим сценарием :("
